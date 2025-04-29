@@ -59,6 +59,13 @@ const Index = () => {
     ? STICKERS 
     : STICKERS.filter(sticker => sticker.category === selectedCategory);
 
+  const scrollToCatalog = () => {
+    const catalogSection = document.getElementById('catalog-section');
+    if (catalogSection) {
+      catalogSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -74,7 +81,10 @@ const Index = () => {
               Украсьте свой день с нашей коллекцией уникальных стикеров ручной работы.
               От милых животных до забавных фраз — у нас есть все!
             </p>
-            <Button className="bg-sticker-skyblue hover:bg-sticker-blue text-white px-8 py-3 rounded-lg font-medium text-lg">
+            <Button 
+              className="bg-sticker-skyblue hover:bg-sticker-blue text-white px-8 py-3 rounded-lg font-medium text-lg"
+              onClick={scrollToCatalog}
+            >
               Смотреть каталог
             </Button>
           </div>
@@ -97,7 +107,7 @@ const Index = () => {
       </div>
       
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-12">
+      <div id="catalog-section" className="container mx-auto px-4 py-12 scroll-mt-20">
         <div className="mb-8">
           <h2 className="text-3xl font-bold mb-6 text-gray-800">Наши стикеры</h2>
           <CategoryFilter 
