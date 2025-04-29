@@ -75,7 +75,7 @@ const Index = () => {
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 mb-8 md:mb-0">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
-              Милые лягушки<br /> для тебя
+              Лучшие стикеры
             </h1>
             <p className="text-lg text-gray-700 mb-6">
               Украсьте свой день с нашей коллекцией уникальных стикеров ручной работы.
